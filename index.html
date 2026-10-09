@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BCMS সফটওয়্যার এর ব্যবহারবিধি</title>
+    <style>
+        /* বেসিক স্টাইল এবং রিসেট */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #2c3e50;
+        }
+
+        /* একর্ডিয়ন / টিউটোরিয়াল কার্ড স্টাইল */
+        .tutorial-card {
+            background-color: #fff;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            overflow: hidden;
+            border: 1px solid #e0e0e0;
+        }
+
+        /* কার্ডের হেডার (ক্লিক করার জায়গা) */
+        .card-header {
+            padding: 15px 20px;
+            background-color: #007bff;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background-color 0.3s;
+        }
+
+        .card-header:hover {
+            background-color: #0056b3;
+        }
+
+        .card-header .icon {
+            font-size: 20px;
+            transition: transform 0.3s;
+            margin-left: 10px;
+        }
+
+        /* কার্ডের ভেতরের কনটেন্ট (প্রথমে লুকিয়ে থাকবে) */
+        .card-body {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-out, padding 0.3s ease-out;
+            padding: 0 20px;
+        }
+
+        .card-body.active {
+            padding: 20px;
+        }
+
+        /* এক্সপান্ড হলে আইকন ঘোরানোর জন্য */
+        .card-header.active .icon {
+            transform: rotate(450deg);
+        }
+
+        .instruction-text {
+            margin-bottom: 15px;
+            font-size: 15px;
+        }
+
+        .instruction-text ol, .instruction-text ul {
+            margin-left: 20px;
+            margin-top: 8px;
+        }
+
+        /* ইউটিউব রেসপন্সিভ ভিডিও কন্টেইনার (১৬:৯ অনুপাতে অটো ফিট হবে) */
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: 6px;
+            background-color: #000;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        /* মোবাইল স্ক্রিনের জন্য অ্যাডজাস্টমেন্ট */
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            .card-header {
+                font-size: 16px;
+                padding: 12px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>BCMS সফটওয়্যার এর ব্যবহারবিধি</h1>
+
+        <!-- টিউটোরিয়াল ধাপ ১ -->
+        <div class="tutorial-card">
+            <div class="card-header" onclick="toggleAccordion(this)">
+                <span>ধাপ ১: সফটওয়্যারটি ডাউনলোড করে পছন্দের ড্রাইভে রেখে চালু করা</span>
+                <span class="icon">+</span>
+            </div>
+            <div class="card-body">
+                <div class="instruction-text">
+                    <p>নিচের ধাপগুলো অনুসরন করে সফটওয়্যারটি ডাউনলোড করে পছন্দের ড্রাইভে রাখবো:</p>
+                    <ol>
+                        <li>আমরা হোয়াটসএ্যাপ এ পাওয়া লিংক থেকে প্রথমে ডাউনলোড করবো</li>
+                        <li>ডাউনলোড করার পর Unzip করবো</li>
+                        <li>Unzip করার পর একটি ফোল্ডার বেড় হবে যেটার ভেতরে অনেক ফাইল থাকবে। পুরো ফোল্ডারটি কপি করে আপনার পছন্দের ড্রাইভে রাখুন। ভিডিওতে D:\ ড্রাইভে কপি করে রাখা হয়েছে।</li>
+                        <li>আগামীতে সফটওয়্যারটি সব সময় সেখান থেকেই ব্যবহার করুন</li>
+                    </ol>
+                </div>
+                <div class="video-container">
+                    <!-- YOUR_VIDEO_ID_1 এর জায়গায় ধাপ ১ এর ইউটিউব ভিডিও আইডি বসান -->
+                    <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID_1?rel=0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+
+        <!-- টিউটোরিয়াল ধাপ ২ -->
+        <div class="tutorial-card">
+            <div class="card-header" onclick="toggleAccordion(this)">
+                <span>ধাপ ২: সফটওয়্যারে লগইন করা, টাইটেল, অর্থ বছর ও বাজেটের তথ্য দেখা এবং সফটওয়্যার থেকে বেড় হওয়া</span>
+                <span class="icon">+</span>
+            </div>
+            <div class="card-body">
+                <div class="instruction-text">
+                    <p>পুনরায় সফটওয়্যারের ফোল্ডারে গিয়ে সফটওয়্যারটি চালু করবো এবং লগইন করে ভেতরে প্রবেশ করতে নিচের ধাপগুলো অনুসরণ করুন:</p>
+                    <ul>
+                        <li>পুনরায় সফটওয়্যারের ফোল্ডারে যান। ভিডিওতে D:\ ড্রাইভে রাখা হয়েছিল, তাই D:\ ড্রাইভে গিয়ে সফটওয়্যারের ফোল্ডারে প্রবেশ করা হয়েছে।</li>
+                        <li>এবার bcmswin.exe নামের ফাইলটিতে ডাবল ক্লিক করে চালু করুন।</li>
+                        <li>সফটওয়্যারটি চালু হলে কেন্দ্র থেকে প্রদানকৃত User Name ও Password দিয়ে প্রবেশ করুন</li>
+                        <li>সফটওয়্যারের ঠিক উপরে টাইটেল বারে Budget and Chanda Management System (BCMS) এর পর আপনার জামাতের নাম লিখা থাকবে এবং তারপর Financial Year: এর পর চলতি অর্থ বছর লিখা থাকবে।</li>
+                        <li>সফটওয়্যারের উপরের মেনু থেকে Activity তে ক্লিক করে Current Year এ যাবো, তারপর MIS Report এ যাবো। এখানে আপাতত কোন বাজেট ও চাঁদা এন্ট্রি করা নেই বিধায় সেখানে সকল তথ্য ০ দেখাচ্ছে। আমরা আগামীতে একটি বাজেট এন্ট্রি দেয়ার পর পুনরায় এই রিপোর্টটি চেক করবো</li>
+                        <li>সফটওয়্যারটি থেকে বেড় হতে হলে পুনরায় মেনু বার থেকে Exit অপশনটিতে ক্লিক করতে হবে এবং Exit from BCMS এ ক্লিক করলে Exit অপশন আসবে যেটাতে ক্লিক করলে বেড় হয়ে যাবে</li>
+                    </ul>
+                </div>
+                <div class="video-container">
+                    <!-- YOUR_VIDEO_ID_2 এর জায়গায় ধাপ ২ এর ইউটিউব ভিডিও আইডি বসান -->
+                    <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID_2?rel=0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+
+        <!-- টিউটোরিয়াল ধাপ ৩ -->
+        <div class="tutorial-card">
+            <div class="card-header" onclick="toggleAccordion(this)">
+                <span>ধাপ ৩: আইডি থাকা একজন সদস্যকে সিস্টেম থেকে খুজে বেড় করে তার প্রোফাইল হালনাগাদ ও বাজেট এন্ট্রি করা</span>
+                <span class="icon">+</span>
+            </div>
+            <div class="card-body">
+                <div class="instruction-text">
+                    <p>পুনরায় সফটওয়্যারটিতে লগইন করে ভেতরে প্রবেশ করে ১ জন সদস্যের আইডি খুজে বেড় করবো এবং তার বাজেট এন্ট্রি দিবো:</p>
+                    <ul>
+                        <li>সফওয়্যারটি পূর্বের নিয়মে চালু করে লগইন করবো</li>
+                        <li>উপরের মেনু বার থেকে Budget --> Activity তে গিয়ে Current Year এ ক্লিক করে Member এ যাবো তারপর Find Member অপশনে ক্লিক করবো</li>
+                        <li>ফাইন্ড মেম্বার এ সদস্যের নাম লিখবো পুরো নাম না লিখে নামের প্রথম কয়েকটি শব্দ লিখেও সার্চ করা যায়</li>
+                        <li>সার্চ করে নামটি পেলে নিচে নামের উপর ক্লিক করে উপরে ক্রস বাটনে ক্লিক করবো</li>
+                        <li>দেখা যাবে তার আইডি নম্বরটি Please enter ID Number এ উঠে আছে।</li>
+                        <li>এরপর Profile Entry তে ক্লিক করবো এবং Lazemi Chanda অপশনে ক্লিক করবো। এরপর কিবোর্ডের enter বাটনে ক্লিক করলে উক্ত আইডি নম্বরের Profile এ প্রবেশ করবে যেখানে সদস্যের নাম ও অন্যান্য তথ্য পূরণ বা আপডেট করা যাবে।</li>
+                        <li>আমরা উক্ত সদস্যের বাজেট এন্ট্রির জন্য Income Detail বাটনে ক্লিক করবো এবং সেখানে বাজেটের তথ্য অনুযায়ী মাসিক আয়, আদায়ের হার (1/10 হলে 0.1 এবং 1/16 হলে 0.625 দিবো। একই সাথে JS অর্থাৎ Jalsa Salana অপশনটিতে টিক দিবো। এরপর Process বাটনে ক্লিক করলে সফটওয়্যার অটোমেটিক তার বাজেট ক্যালকুলেট করে বলবে চাঁদা আম/হিস্যায়ে আমদ কত, এবং জলসা সালানা কত হবে।</li>
+                        <li>হিসাব ঠিক থাকলে Save বাটনে ক্লিক করে বেড় হয়ে এসে পুনরায় প্রোফাইলটি Save করবো।</li>
+                        <li>আমরা একজন সদস্যের বাজেট এন্ট্রি সম্পন্ন করেছি, তাই তার খতিয়ান দেখার জন্য View/Print অপশনে ক্লিক করবো। এছাড়া পূর্বের মতো MIS Report এ গেলে দেখা যাবে ১ জন সদস্যের বাজেট সেখানে অন্তর্ভুক্ত হয়েছে। সকল সদস্যের বাজেট এন্ট্রি সম্পন্ন হলে MIS Report থেকে মোট বাজেট ও মোট সদস্য সংখ্যার সামারী দেখা যাবে</li>
+                    </ul>
+                </div>
+                <div class="video-container">
+                    <!-- YOUR_VIDEO_ID_3 এর জায়গায় ধাপ ৩ এর ইউটিউব ভিডিও আইডি বসান -->
+                    <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID_3?rel=0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+
+        <!-- টিউটোরিয়াল ধাপ ৪ -->
+        <div class="tutorial-card">
+            <div class="card-header" onclick="toggleAccordion(this)">
+                <span>ধাপ ৪: পূর্বের বকেয়া আছে এমন একজন সদস্যের তথ্য সিস্টেম থেকে খুজে বেড় করে তার প্রোফাইল হালনাগাদ করা</span>
+                <span class="icon">+</span>
+            </div>
+            <div class="card-body">
+                <div class="instruction-text">
+                    <p>পুনরায় Current Year এ ক্লিক করে Member এ যাবো তারপর Find Member অপশনে ক্লিক করে ব্যক্তির নাম সার্চ করে আইডি খুজে বেড় করবো এবং প্রোফাইলে প্রবেশ করে নিচের অপশনে গিয়ে Arrear ও Budget হালনাগাদ করবো:</p>
+                    <ul>
+                        <li>সফওয়্যারটি পূর্বের নিয়মে চালু করে লগইন করবো</li>
+                        <li>উপরের মেনু বার থেকে Budget --> Activity তে গিয়ে Current Year এ ক্লিক করে Member এ যাবো তারপর Find Member অপশনে ক্লিক করবো</li>
+                        <li>ফাইন্ড মেম্বার এ সদস্যের নাম লিখবো পুরো নাম না লিখে নামের প্রথম কয়েকটি শব্দ লিখেও সার্চ করা যায়</li>
+                        <li>সার্চ করে নামটি পেলে নিচে নামের উপর ক্লিক করে উপরে ক্রস বাটনে ক্লিক করবো</li>
+                        <li>দেখা যাবে তার আইডি নম্বরটি Please enter ID Number এ উঠে আছে।</li>
+                        <li>এরপর Profile Entry তে ক্লিক করবো এবং Lazemi Chanda অপশনে ক্লিক করবো। এরপর কিবোর্ডের enter বাটনে ক্লিক করলে উক্ত আইডি নম্বরের Profile এ প্রবেশ করবে যেখানে সদস্যের নাম ও অন্যান্য তথ্য পূরণ বা আপডেট করা যাবে।</li>
+                        <li>আমরা উক্ত সদস্যের বাজেট এন্ট্রির জন্য Income Detail বাটনে ক্লিক করবো এবং সেখানে বাজেটের তথ্য অনুযায়ী মাসিক আয়, আদায়ের হার (1/10 হলে 0.1 এবং 1/16 হলে 0.625 দিবো। একই সাথে JS অর্থাৎ Jalsa Salana অপশনটিতে টিক দিবো। এরপর Process বাটনে ক্লিক করলে সফটওয়্যার অটোমেটিক তার বাজেট ক্যালকুলেট করে বলবে চাঁদা আম/হিস্যায়ে আমদ কত, এবং জলসা সালানা কত হবে।</li>
+                        <li>হিসাব ঠিক থাকলে Save বাটনে ক্লিক করে বেড় হয়ে এসে পুনরায় প্রোফাইলটি Save করবো।</li>
+                        <li>আমরা একজন সদস্যের বাজেট এন্ট্রি সম্পন্ন করেছি, তাই তার খতিয়ান দেখার জন্য View/Print অপশনে ক্লিক করবো। এছাড়া পূর্বের মতো MIS Report এ গেলে দেখা যাবে ১ জন সদস্যের বাজেট সেখানে অন্তর্ভুক্ত হয়েছে। সকল সদস্যের বাজেট এন্ট্রি সম্পন্ন হলে MIS Report থেকে মোট বাজেট ও মোট সদস্য সংখ্যার সামারী দেখা যাবে</li>
+                    </ul>
+                </div>
+                <div class="video-container">
+                    <!-- YOUR_VIDEO_ID_4 এর জায়গায় ধাপ ৪ এর ইউটিউব ভিডিও আইডি বসান -->
+                    <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID_4?rel=0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+
+    </div>	
+
+    <!-- এক্সপান্ড ও কোলাপ্স করার JavaScript -->
+    <script>
+        function toggleAccordion(headerElement) {
+            const cardBody = headerElement.nextElementSibling;
+            
+            // হেডার এবং বডির ক্লাস টগল করা
+            headerElement.classList.toggle('active');
+            cardBody.classList.toggle('active');
+
+            if (cardBody.classList.contains('active')) {
+                // কন্টেন্ট অনুযায়ী উচ্চতা বাড়ানো
+                cardBody.style.maxHeight = cardBody.scrollHeight + "px";
+                
+                // আইকন পরিবর্তন
+                headerElement.querySelector('.icon').innerText = '−';
+            } else {
+                cardBody.style.maxHeight = null;
+                headerElement.querySelector('.icon').innerText = '+';
+                
+                // কার্ড বন্ধ করার সময় ভিডিও রিলোড করে পজ/বন্ধ করে দেয়া
+                const iframe = cardBody.querySelector('iframe');
+                if (iframe) {
+                    const iframeSrc = iframe.src;
+                    iframe.src = iframeSrc;
+                }
+            }
+        }
+    </script>
+</body>
+</html>
